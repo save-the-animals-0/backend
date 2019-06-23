@@ -1,1 +1,1 @@
-# backend
+# Backend project for "Save The Animals" build week
