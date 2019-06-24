@@ -1,6 +1,6 @@
 const config = require("config.json");
 const db = require("_helpers/db");
-const Campaign = db.Campaign;
+const Campaign = db.Campaigns;
 
 module.exports = {
   getAll,
@@ -10,13 +10,12 @@ module.exports = {
   delete: _delete
 };
 
-
 async function getAll() {
-  return await Campaign.find()
+  return await Campaign.find();
 }
 
 async function getById(id) {
-  return await Campaign.findById(id)
+  return await Campaign.findById(id);
 }
 
 //might need to be find instead of findOne, also figure out if I need a "new function" inside of create//
