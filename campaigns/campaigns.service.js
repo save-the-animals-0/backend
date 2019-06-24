@@ -23,12 +23,6 @@ async function create(campaignParam) {
   if (await Campaign.findOne({ campaign: campaignParam.campaignName })) {
     throw "Campaign name already exists";
   }
-
-  const campaign = new Campaign(campaignParam);
-  if (campaignParam.campaignName) {
-    //????  = (campaignParam.campaignName);
-  }
-
   await campaign.save();
 }
 
