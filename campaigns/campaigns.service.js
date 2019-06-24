@@ -19,13 +19,15 @@ async function getById(id) {
   return await Campaign.findById(id)
 }
 
+//might need to be find instead of findOne, also figure out if I need a "new function" inside of create//
+
 async function create(campaignParam) {
   if (await Campaign.findOne({ campaign: campaignParam.campaignName })) {
     throw "Campaign name already exists";
   }
   await campaign.save();
 }
-
+//
 async function update(id, campaignParam) {
   const campaign = await Campaign.findById(id);
 
