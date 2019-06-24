@@ -1,21 +1,23 @@
+require("rootpath")();
 const express = require("express");
-const mongoose = require("mongoose");
-
 const app = express();
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const jwt = require("_helpers/jwt");
+const errorHandler = require("_helpers/errors");
 
-//connect to mongoose
-mongoose
-  .connect("mongodb://localhost/savetheanimals", { useNewUrlParser: true })
-  .then(() => console.log("mongoDB Connected ..."))
-  .catch(err => console.log(err));
-//
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(cors());
 
-app.get("/", (req, res) => {
-  res.send("API is running ~ :)");
-});
+app.use(jwt());
 
-const port = process.env.PORT || 8000;
+app.use("/users", require("./users/users.controller"));
 
-app.listen(port, () => {
-  console.log(`Server started on port ${port}`);
+app.use(errorHandler);
+
+const port =
+  process.env.NODE_ENV === "production" ? process.env.PORT || 80 : 8000;
+const server = app.listen(port, function() {
+  console.log("Server listening on port " + port);
 });
