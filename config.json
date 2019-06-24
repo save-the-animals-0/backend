@@ -1,4 +1,4 @@
 {
-  "connectionString": "mongodb://localhost/savetheanimals",
+  "connectionString": "mongodb://localhost:27017/admin",
   "secret": "SO SECRETY"
 }
