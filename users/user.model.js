@@ -8,10 +8,9 @@ const userSchema = new Schema({
   fullName: {
     firstName: { type: String, required: true },
     lastName: { type: String, required: true }
-  }
+  },
+  _roles: ["organizations", "supporters"]
 });
-
-
 
 userSchema.set("toJSON", { virtuals: true });
 
