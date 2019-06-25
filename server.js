@@ -3,23 +3,16 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const jwt = require("_helpers/jwt");
 const errorHandler = require("_helpers/errors");
+
+require("./database");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use(jwt());
-
-app.use(
-  "/users/organizations",
-  require("./users/organizations/organizations.controller")
-);
-app.use(
-  "/users/supporters",
-  require("./users/supporters/supporters.controller")
-);
+app.use("/users", require("./controllers/user"));
+app.use("/campaigns", require("./controllers/campaign"));
 app.use(errorHandler);
 
 const port =

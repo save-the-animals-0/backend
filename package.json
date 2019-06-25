@@ -2,9 +2,9 @@
   "name": "save-the-animals-be",
   "version": "1.0.0",
   "description": "Build Week Project for Lambda School",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "server": "nodemon index.js",
+    "server": "nodemon server.js",
     "test": "testing jest --watchAll --verbose"
   },
   "repository": {
@@ -23,12 +23,9 @@
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
-    "express-jwt": "^5.3.1",
     "express-session": "^1.16.2",
-    "helmet": "^3.18.0",
     "jest": "^24.8.0",
     "jsonwebtoken": "^8.5.1",
-    "knex": "^0.17.6",
     "mongoose": "^5.6.0",
     "rootpath": "^0.1.2",
     "supertest": "^4.0.2"
