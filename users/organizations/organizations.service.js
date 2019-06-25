@@ -16,7 +16,7 @@ module.exports = {
 async function authenticate({ username, password }) {
   const organizations = await Organizations.findOne({ username });
   if (organizations && bcrypt.compareSync(password, organizations.hash)) {
-    const { hash, ...userWithoutHash } = organizations.toObject();
+    const { hash, ...organizationsWithoutHash } = organizations.toObject();
     const token = jwt.sign({ sub: organizations.id }, config.secret);
     return {
       ...organizationsWithoutHash,
@@ -46,7 +46,7 @@ async function create(organizationsParam) {
   await organizations.save();
 }
 
-async function update(id, userParam) {
+async function update(id, organizationsParam) {
   const organizations = await Organizations.findById(id);
 
   if (!organizations) throw "User not found";
