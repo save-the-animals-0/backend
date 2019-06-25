@@ -10,4 +10,4 @@ const campaignsSchema = new Schema({
 
 campaignsSchema.set("toJSON", { virtuals: true });
 
-module.exports = mongoose.model("User", campaignsSchema);
+module.exports = mongoose.model("Campaigns", campaignsSchema);

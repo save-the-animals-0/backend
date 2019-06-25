@@ -18,7 +18,7 @@ async function getById(id) {
   return await Campaign.findById(id);
 }
 
-//might need to be find instead of findOne, also figure out if I need a "new function" inside of create//
+//figure out if I need a "'new' function" inside of create//
 
 async function create(campaignParam) {
   if (await Campaign.findOne({ campaign: campaignParam.campaignName })) {

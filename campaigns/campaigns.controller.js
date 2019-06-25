@@ -12,11 +12,10 @@ router.delete("/:id", _delete);
 
 module.exports = router;
 
-
 function getAll(req, res, next) {
   campaignsService
     .getAll()
-    .then(users => res.json(users))
+    .then(campaign => res.json(campaign))
     .catch(err => next(err));
 }
 
