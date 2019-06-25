@@ -1,6 +1,6 @@
 const config = require("config.json");
 const db = require("_helpers/db");
-const Campaign = db.Campaigns;
+const Campaigns = db.Campaigns;
 
 module.exports = {
   getAll,
@@ -11,38 +11,38 @@ module.exports = {
 };
 
 async function getAll() {
-  return await Campaign.find();
+  return await Campaigns.find();
 }
 
 async function getById(id) {
-  return await Campaign.findById(id);
+  return await Campaigns.findById(id);
 }
 
 //figure out if I need a "'new' function" inside of create//
 
 async function create(campaignParam) {
-  if (await Campaign.findOne({ campaign: campaignParam.campaignName })) {
+  if (await Campaigns.findOne({ campaigns: campaignsParam.campaignsName })) {
     throw "Campaign name already exists";
   }
-  await campaign.save();
+  await campaigns.save();
 }
 //
 async function update(id, campaignParam) {
-  const campaign = await Campaign.findById(id);
+  const campaigns = await Campaigns.findById(id);
 
-  if (!campaign) throw "Campaign not found";
+  if (!campaigns) throw "Campaign not found";
   if (
-    campaign.campaignName !== campaignParam.campaignName &&
-    (await Campaign.findOne({ campaignName: campaignParam.campaignName }))
+    campaigns.campaignName !== campaignsParam.campaignName &&
+    (await Campaigns.findOne({ campaignName: campaignsParam.campaignName }))
   ) {
     throw "Campaign name is already in use";
   }
 
-  Object.assign(campaign, campaignParam);
+  Object.assign(campaigns, campaignsParam);
 
-  await campaign.save();
+  await campaigns.save();
 }
 
 async function _delete(id) {
-  await Campaign.findByIdAndRemove(id);
+  await Campaigns.findByIdAndRemove(id);
 }

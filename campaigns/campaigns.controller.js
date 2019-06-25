@@ -15,21 +15,21 @@ module.exports = router;
 function getAll(req, res, next) {
   campaignsService
     .getAll()
-    .then(campaign => res.json(campaign))
+    .then(campaign => res.json(campaigns))
     .catch(err => next(err));
 }
 
 function getCurrent(req, res, next) {
   campaignsService
-    .getById(req.campaign.sub)
-    .then(user => (campaign ? res.json(campaign) : res.sendStatus(404)))
+    .getById(req.campaigns.sub)
+    .then(user => (campaigns ? res.json(campaigns) : res.sendStatus(404)))
     .catch(err => next(err));
 }
 
 function getById(req, res, next) {
   campaignsService
     .getById(req.params.id)
-    .then(user => (campaign ? res.json(campaign) : res.sendStatus(404)))
+    .then(user => (campaigns ? res.json(campaigns) : res.sendStatus(404)))
     .catch(err => next(err));
 }
 

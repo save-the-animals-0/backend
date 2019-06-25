@@ -12,8 +12,14 @@ app.use(cors());
 
 app.use(jwt());
 
-app.use("/users", require("./users/users.controller"));
-
+app.use(
+  "/users/organizations",
+  require("./users/organizations/organizations.controller")
+);
+app.use(
+  "/users/supporters",
+  require("./users/supporters/supporters.controller")
+);
 app.use(errorHandler);
 
 const port =
