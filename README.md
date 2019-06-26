@@ -17,6 +17,7 @@
 
       campaignName
       fundingGoal
+      fundingRaised
       deadline
       location
       urgencyLevel
@@ -29,7 +30,8 @@
  {   
     "campaignName": "Save the Whales",
 	"fundingGoal": 10000,
-	"deadline": 2020,
+    "fundingRaised": 5000,
+	"deadline": "1.20.2020",
 	"location": "Japan",
 	"urgencyLevel": "High",
 	"species": "whale",
