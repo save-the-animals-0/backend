@@ -25,16 +25,16 @@
 
 # Campaign POST Template:
 
-```
-{
-	"campaignName": "Save the Whales",
+``` 
+ {   
+    "campaignName": "Save the Whales",
 	"fundingGoal": 10000,
 	"deadline": 2020,
 	"location": "Japan",
 	"urgencyLevel": "High",
 	"species": "whale",
 	"description": "Preserve and protect the ocean and its inhabitants."
-}
+ }
 ```
 # User routes:
 
