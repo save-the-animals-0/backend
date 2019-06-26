@@ -27,17 +27,17 @@
 
 ## Without verifications:
 
-    .post ("/user/auth")           **Authenticates User**
-    .post ("/user/register")       **Registers User**
+    .post ("/users/auth")           **Authenticates User**
+    .post ("/users/register")       **Registers User**
 
 ## With verifications:
 
-    .get ("/user/organizations")   **Fetches Organizations**
-    .get ("/user/supporters")      **Fetches Supporters**
-    .get ("/user/current")         **Fetches Current**
-    .get ("/user/:id")             **Grabs user by ID**
-    .put ("/user/:id")             **Updates user by ID**
-    .delete ("/user/:id")          **Removes a user**
+    .get ("/users/organizations")   **Fetches Organizations**
+    .get ("/users/supporters")      **Fetches Supporters**
+    .get ("/users/current")         **Fetches Current**
+    .get ("/users/:id")             **Grabs user by ID**
+    .put ("/users/:id")             **Updates user by ID**
+    .delete ("/users/:id")          **Removes a user**
 
 
 # User table takes in the following fields:
