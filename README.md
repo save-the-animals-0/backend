@@ -23,6 +23,18 @@
       species
       description
 
+# Campaign POST Template:
+
+{
+	"campaignName": "Save the Whales",
+	"fundingGoal": 10000,
+	"deadline": 2020,
+	"location": "Japan",
+	"urgencyLevel": "High",
+	"species": "whale",
+	"description": "Preserve and protect the ocean and its inhabitants."
+}
+
 # User routes:
 
 ## Without verifications:
@@ -46,3 +58,21 @@
      password
      name
      isOrg: { type: Boolean}
+
+# User POST template
+
+>Supporter
+{
+	"email": "fff@fff.com",
+	"password": "fff",
+	"name": "Jane",
+	"isOrg": false,
+}
+>Organization
+
+{
+	"email": "fff@fff.com",
+	"password": "fff",
+	"name": "ASPCA",
+	"isOrg": true,
+}
