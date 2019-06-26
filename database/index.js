@@ -6,7 +6,8 @@ const DB_USER = process.env.DB_USER;
 const DB_PASS = process.env.DB_PASS;
 const DB_NAME = process.env.DB_NAME;
 
-const mongoURI = `mongodb+srv://${DB_USER}:${DB_PASS}@save-the-animals-dzt5e.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`;
+// const mongoURI = `mongodb+srv://${DB_USER}:${DB_PASS}@save-the-animals-dzt5e.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`;
+const mongoURI = `mongodb+srv://${DB_USER}:${DB_PASS}@cluster0-a4whc.mongodb.net/test?retryWrites=true&w=majority`
 
 mongoose.connect(
   mongoURI,
