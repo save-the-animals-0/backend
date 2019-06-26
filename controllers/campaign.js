@@ -26,10 +26,17 @@ function create(req, res, next) {
 }
 
 function getAll(req, res, next) {
+  console.log('running')
   campaignService
     .getAll()
-    .then(campaigns => res.json(campaigns))
-    .catch(err => next(err));
+    .then(campaigns => {
+      console.log('success', campaigns)
+      res.json(campaigns)
+    })
+    .catch(err => {
+      console.log('error', err)
+      next(err)
+    });
 }
 
 function getCurrent(req, res, next) {
