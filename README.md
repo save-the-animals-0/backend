@@ -1,24 +1,26 @@
-# Backend project for "Save The Animals" build week by Alyssa Hatfield
+# Backend project for "Save The Animals" build week
 
-  Backend is hosted at: https://protected-temple-41202.herokuapp.com/
+# by Alyssa Hatfield
 
-#Campaign routes:
+Backend is hosted at: https://protected-temple-41202.herokuapp.com/
 
-    .get("/", getAll);
-    .post("/", create);
+# Campaign routes:
+
+    .get("/", getAll)
+    .post("/", create)
     .get("/current", getCurrent)
     .get("/:id", getById)
     .put("/:id", update)
     .delete("/:id", _delete)
 
-#User routes:
+# User routes:
 
- ##Without verifications:
+## Without verifications:
 
     .post("/auth")
     .post("/register")
 
- ##With verifications:
+## With verifications:
 
     .get ("/organizations")
     .get ("/supporters")
