@@ -42,7 +42,7 @@ function register(req, res, next) {
     })
     .catch(err => next(err));
 }
-
+ 
 function getAllOrgs(req, res, next) {
   userService
     .getAll(true)
