@@ -6,25 +6,25 @@
 
 # Campaign routes:
 
-    .get("/", getAll)
-    .post("/", create)
-    .get("/current", getCurrent)
-    .get("/:id", getById)
-    .put("/:id", update)
-    .delete("/:id", _delete)
+    .get    ("/", getAll)
+    .post   ("/campaigns")  **creates**
+    .get    ("/campaigns/current") **grabs current**
+    .get    ("/campaigns/:id") **fetches by id**
+    .put    ("/campaigns/:id") **updates**
+    .delete ("/:id") **removes**
 
 # User routes:
 
 ## Without verifications:
 
-    .post("/auth")
-    .post("/register")
+    .post ("/user/auth")
+    .post ("/user/register")
 
 ## With verifications:
 
-    .get ("/organizations")
-    .get ("/supporters")
-    .get ("/current")
-    .get ("/:id")
-    .put ("/:id")
-    .delete ("/:id")
+    .get ("/user/organizations")
+    .get ("/user/supporters")
+    .get ("/user/current")
+    .get ("/user/:id")
+    .put ("/user/:id")
+    .delete ("/user/:id")
