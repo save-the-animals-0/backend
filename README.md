@@ -8,10 +8,10 @@
 
     .get    ("/campaigns")         **fetches all**
     .post   ("/campaigns")         **creates**
-    .get    ("/campaigns/current") **grabs current**
-    .get    ("/campaigns/:id")     **fetches by id**
+    .get    ("/campaigns/current") **grabs current via params.id**
+    .get    ("/campaigns/:id")     **fetches by campaign id**
     .put    ("/campaigns/:id")     **updates**
-    .delete ("/:id")               **removes**
+    .delete ("/campaigns/:id")     **removes**
 
 # Campaign table takes in the following fields:
 
