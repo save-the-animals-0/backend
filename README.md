@@ -13,6 +13,16 @@
     .put    ("/campaigns/:id")     **updates**
     .delete ("/:id")               **removes**
 
+# Campaign table takes in the following fields:
+
+      campaignName
+      fundingGoal
+      deadline
+      location
+      urgencyLevel
+      species
+      description
+
 # User routes:
 
 ## Without verifications:
@@ -28,3 +38,11 @@
     .get ("/user/:id")             **Grabs user by ID**
     .put ("/user/:id")             **Updates user by ID**
     .delete ("/user/:id")          **Removes a user**
+
+
+# User table takes in the following fields:
+
+     email
+     password
+     name
+     isOrg: { type: Boolean}
