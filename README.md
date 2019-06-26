@@ -6,7 +6,7 @@
 
 # Campaign routes:
 
-    .get    ("/")                  **fetches all**
+    .get    ("/campaigns")                  **fetches all**
     .post   ("/campaigns")         **creates**
     .get    ("/campaigns/current") **grabs current**
     .get    ("/campaigns/:id")     **fetches by id**
