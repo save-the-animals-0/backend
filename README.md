@@ -38,7 +38,7 @@
 ```
 # User routes:
 
-> Set the header Authorization as "Bearer <token>" before calling the routes of User.
+> Set the header Authorization as "`Bearer <token>`" before calling the routes of User.
 
 ## Without verifications:
 
