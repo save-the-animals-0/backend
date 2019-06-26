@@ -33,8 +33,8 @@
 	"urgencyLevel": "High",
 	"species": "whale",
 	"description": "Preserve and protect the ocean and its inhabitants."
-}```
-
+}
+```
 # User routes:
 
 ## Without verifications:
@@ -62,12 +62,14 @@
 # User POST template
 
 >Supporter
-```{
+```
+{
 	"email": "fff@fff.com",
 	"password": "fff",
 	"name": "Jane",
 	"isOrg": false,
-}```
+}
+```
 >Organization
 
 ```{
@@ -75,4 +77,5 @@
 	"password": "fff",
 	"name": "ASPCA",
 	"isOrg": true,
-}```
+}
+```
