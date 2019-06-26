@@ -38,6 +38,8 @@
 ```
 # User routes:
 
+> Set the header Authorization as "Bearer <token>" before calling the routes of User.
+
 ## Without verifications:
 
     .post ("/users/auth")           **Authenticates User**
