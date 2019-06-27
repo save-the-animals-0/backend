@@ -23,7 +23,7 @@ const update = async (campaign, data) => {
   });
 };
 
-const _delete = async id => await Campaigns.findOneAndDelete(id, { new: true });
+const _delete = async id => await Campaigns.findOneAndDelete(id);
 
 module.exports = {
   getAll,

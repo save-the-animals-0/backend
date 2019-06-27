@@ -64,7 +64,7 @@ function update(req, res, next) {
 
 function _delete(req, res, next) {
   campaignService
-    .delete(req.params.id)
+    ._delete(req.params.id)
     .then(deletedCampaign =>
       deletedCampaign ? res.json(deletedCampaign) : res.sendStatus(400)
     )
