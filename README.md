@@ -62,7 +62,7 @@
      email
      password
      name
-     isOrg: { type: Boolean}
+     isOrg: { type: Boolean }
 
 # User POST template
 
