@@ -1,6 +1,6 @@
-# Backend project for "Save The Animals" build week
+# Backend Project for "Save The Animals" Build Week
 
-# by Alyssa Hatfield
+# By Alyssa Hatfield
 
 > Backend is hosted at: https://protected-temple-41202.herokuapp.com/
 
