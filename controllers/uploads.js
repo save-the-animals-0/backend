@@ -1,17 +1,12 @@
 const express = require("express");
-const route = express.Router();
+const router = express.Router();
 const fs = require("fs");
-const mongoose = require("mongoose");
-
-// //connect to the database
-// mongoose.connect("mongodb://localhost/images");
-// let db = mongoose.connection;
 
 const upload = require("../multer/storage");
 
 const Image = require("../models/images");
 
-route.delete("/uploads/:id", (req, res) => {
+router.delete("/uploads/:id", (req, res) => {
   let query = { image: req.params.id };
 
   Image.remove(query, err => {
@@ -30,7 +25,7 @@ route.delete("/uploads/:id", (req, res) => {
   });
 });
 
-route.get("/uploads", (req, res, next) => {
+router.get("/uploads", (req, res, next) => {
   Image.find({}, (err, images) => {
     if (err) {
       console.log(err);
@@ -42,7 +37,7 @@ route.get("/uploads", (req, res, next) => {
   });
 });
 
-route.post("/uploads", (req, res, next) => {
+router.post("/uploads", (req, res, next) => {
   upload(req, res, function(err) {
     if (req.file == null || req.file == undefined || req.file == "") {
       res.redirect("/");
@@ -67,4 +62,4 @@ route.post("/uploads", (req, res, next) => {
   });
 });
 
-module.exports = route;
+module.exports = router;
