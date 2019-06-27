@@ -6,12 +6,12 @@
 
 # Campaign routes:
 
-    .get    ("/campaigns")         **fetches all**
-    .post   ("/campaigns")         **creates**
-    .get    ("/campaigns/current") **grabs current via params.id**
-    .get    ("/campaigns/:id")     **fetches by campaign id**
-    .put    ("/campaigns/:id")     **updates**
-    .delete ("/campaigns/:id")     **removes**
+    .get    ("/campaigns")         - Fetches all campaigns
+    .post   ("/campaigns")         - Creates a campaign
+    .get    ("/campaigns/current") - Grabs current via params id
+    .get    ("/campaigns/:id")     - Fetches by campaign id
+    .put    ("/campaigns/:id")     - Updates a campaign
+    .delete ("/campaigns/:id")     - Removes a campaign
 
 # Campaign table takes in the following fields:
 
@@ -44,17 +44,17 @@
 
 ## Without verifications:
 
-    .post ("/users/auth")           **Authenticates User**
-    .post ("/users/register")       **Registers User**
+    .post ("/users/auth")            - Authenticates User
+    .post ("/users/register")        - Registers User
 
 ## With verifications:
 
-    .get ("/users/organizations")   **Fetches Organizations**
-    .get ("/users/supporters")      **Fetches Supporters**
-    .get ("/users/current")         **Fetches Current**
-    .get ("/users/:id")             **Grabs user by ID**
-    .put ("/users/:id")             **Updates user by ID**
-    .delete ("/users/:id")          **Removes a user**
+    .get ("/users/organizations")    - Fetches Organizations
+    .get ("/users/supporters")       - Fetches Supporters
+    .get ("/users/current")          - Fetches Current
+    .get ("/users/:id")              - Grabs user by ID
+    .put ("/users/:id")              - Updates user by ID
+    .delete ("/users/:id")           - Removes a user
 
 
 # User table takes in the following fields:
@@ -88,6 +88,6 @@
 
 # Image upload routes (Stretch goal):
 
-    .get    ("/uploads")         **Grabs images**
-    .post   ("/uploads")         **Uploads an image**
-    .delete ("/uploads/:id")     **Deletes an image by ID**
+    .get    ("/uploads")          - Grabs images
+    .post   ("/uploads")          - Uploads an image
+    .delete ("/uploads/:id")      - Deletes an image by ID
