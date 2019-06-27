@@ -4,7 +4,7 @@
 
 > Backend is hosted at: https://protected-temple-41202.herokuapp.com/
 
-# Campaign routes:
+# Campaign Routes:
 
     .get    ("/campaigns")         - Fetches all campaigns
     .post   ("/campaigns")         - Creates a campaign
@@ -38,16 +38,16 @@
 	"description": "Preserve and protect the ocean and its inhabitants."
  }
 ```
-# User routes:
+# User Routes:
 
 > Set the header Authorization as "`Bearer <token>`" before calling the routes of User.
 
-## Without verifications:
+## Without Verifications:
 
     .post ("/users/auth")            - Authenticates User
     .post ("/users/register")        - Registers User
 
-## With verifications:
+## With Verifications:
 
     .get ("/users/organizations")    - Fetches Organizations
     .get ("/users/supporters")       - Fetches Supporters
@@ -86,7 +86,7 @@
 }
 ```
 
-# Image upload routes (Stretch goal):
+# Image Upload Routes (Stretch Goal):
 
     .get    ("/uploads")          - Grabs images
     .post   ("/uploads")          - Uploads an image
