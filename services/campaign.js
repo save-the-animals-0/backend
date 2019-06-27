@@ -5,15 +5,12 @@ const getAll = async () => await Campaigns.find();
 const getById = async id => await Campaigns.findById(id);
 
 const create = async campaign => {
-  if (await Campaigns.findOne({ campaignName: campaign.campaignName })) {
-    throw "This Campaign already exists.";
-  }
 
   campaign.deadline = new Date(campaign.deadline);
 
   const newCampaign = new Campaigns(campaign);
 
-  return await newCampaign.save();
+  return newCampaign.save();
 };
 
 const update = async (campaign, data) => {
