@@ -30,8 +30,8 @@ router.get("/uploads", (req, res, next) => {
     if (err) {
       console.log(err);
     } else {
-      res.render("uploads", {
-        images: images
+      res.json({
+        images
       });
     }
   });

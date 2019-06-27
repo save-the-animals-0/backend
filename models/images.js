@@ -9,4 +9,4 @@ let imagesSchema = mongoose.Schema({
 
 imagesSchema.set("toJSON", { virtuals: true });
 
-let Image = (module.exports = mongoose.model("Image", imagesSchema));
+module.exports = mongoose.model("Image", imagesSchema);
