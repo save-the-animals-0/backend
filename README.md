@@ -85,3 +85,9 @@
 	"isOrg": true,
 }
 ```
+
+# Image upload routes (Stretch goal):
+
+    .get    ("/uploads")         **Grabs images**
+    .post   ("/uploads")         **Uploads an image**
+    .delete ("/uploads/:id")     **Deletes an image by ID**
