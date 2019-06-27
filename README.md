@@ -8,7 +8,7 @@
 
     .get    ("/campaigns")         - Fetches all campaigns
     .post   ("/campaigns")         - Creates a campaign
-    .get    ("/campaigns/current") - Grabs current via params id
+    .get    ("/campaigns/current") - Grabs current campaign via params id
     .get    ("/campaigns/:id")     - Fetches by campaign id
     .put    ("/campaigns/:id")     - Updates a campaign
     .delete ("/campaigns/:id")     - Removes a campaign
