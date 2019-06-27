@@ -26,16 +26,16 @@ function create(req, res, next) {
 }
 
 function getAll(req, res, next) {
-  console.log('running')
+  console.log("running");
   campaignService
     .getAll()
     .then(campaigns => {
-      console.log('success', campaigns)
-      res.json(campaigns)
+      console.log("success", campaigns);
+      res.json(campaigns);
     })
     .catch(err => {
-      console.log('error', err)
-      next(err)
+      console.log("error", err);
+      next(err);
     });
 }
 
@@ -56,9 +56,9 @@ function getById(req, res, next) {
 function update(req, res, next) {
   campaignService
     .update(req.params.id, req.body)
-    .then(updatedCampaign =>
-      updatedCampaign ? res.json(updatedCampaign) : res.sendStatus(400)
-    )
+    .then(updatedCampaign => {
+      updatedCampaign ? res.json(updatedCampaign) : res.sendStatus(400);
+    })
     .catch(err => next(err));
 }
 

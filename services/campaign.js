@@ -16,11 +16,12 @@ const create = async campaign => {
   return await newCampaign.save();
 };
 
-const update = async campaign =>
-  await Campaigns.findByIdAndUpdate(campaign.id, campaign, {
+const update = async (campaign, data) => {
+  return await Campaigns.findByIdAndUpdate(campaign, data, {
     useFindAndModify: false,
     new: true
   });
+};
 
 const _delete = async id => await Campaigns.findOneAndDelete(id, { new: true });
 
