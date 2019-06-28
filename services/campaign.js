@@ -5,7 +5,6 @@ const getAll = async () => await Campaigns.find();
 const getById = async id => await Campaigns.findById(id);
 
 const create = async campaign => {
-
   campaign.deadline = new Date(campaign.deadline);
 
   const newCampaign = new Campaigns(campaign);

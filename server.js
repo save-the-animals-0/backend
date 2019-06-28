@@ -10,7 +10,7 @@ require("./database");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
-app.get("/", (req, res) => res.status(200).json({ api: "api running" }));
+app.get("/", (req, res) => res.status(200).json({ api: "api is running" }));
 app.use("/users", require("./controllers/user"));
 app.use("/campaigns", require("./controllers/campaign"));
 app.use(errorHandler);
